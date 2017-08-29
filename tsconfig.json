@@ -5,11 +5,16 @@
       "jsx": "react-native",
       "outDir": "./build/dist",
       "allowSyntheticDefaultImports": true,
-      "noImplicitAny": true,
+      "noImplicitAny": false,
       "experimentalDecorators": true,
       "preserveConstEnums": true,
       "allowJs": false,
-      "sourceMap": true
+      "sourceMap": true,
+      "moduleResolution": "node",
+      "noEmitHelpers": true,
+      "importHelpers": true,
+      "strict": true,
+      "noImplicitReturns": true
     },
     "exclude": [
       "index.android.js",
@@ -18,5 +23,7 @@
       "node_modules",
       "__tests__"
     ],
-    "compileOnSave": true
+    "compileOnSave": true,
+    "baseUrl": "types",
+    "typeRoots": ["types"]
   }

@@ -34,14 +34,19 @@
     "testPathIgnorePatterns": [
       "/node_modules/",
       "<rootDir>/build/"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|expo|react-navigation|native-base-shoutem-theme|@shoutem/theme|@shoutem/animation|@shoutem/ui|tcomb-form-native)"
     ]
   },
   "dependencies": {
+    "@types/fbemitter": "^2.0.32",
     "@types/jest": "^20.0.8",
     "@types/react": "^16.0.4",
     "@types/react-native": "^0.47.6",
     "@types/react-test-renderer": "^15.5.4",
     "expo": "^20.0.0",
+    "native-base": "^2.3.1",
     "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.47.0"
