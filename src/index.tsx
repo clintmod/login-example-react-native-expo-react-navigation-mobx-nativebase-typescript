@@ -1,9 +1,9 @@
-import React, {Component} from "react";
+import * as React from "react";
+import {Component} from "react";
 import {Dimensions} from "react-native";
 import {StyleProvider} from "native-base";
 import {StackNavigator, DrawerNavigator} from "react-navigation";
-import {Font} from "expo";
-import {AppLoading} from "expo";
+import {Font, AppLoading} from "expo";
 import {useStrict, observable, computed} from "mobx";
 import {observer, Provider} from "mobx-react/native";
 
