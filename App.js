@@ -1,3 +1,3 @@
-import App from './build/dist/index';
+import App from './build/dist/src/index';
 
 export default App;

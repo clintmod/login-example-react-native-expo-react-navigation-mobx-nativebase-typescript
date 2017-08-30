@@ -35,11 +35,10 @@ declare module 'expo' {
     /**
      * Expo Components
      */
-    export namespace Components {
         /**
          * AppLoading
          */
-        export class AppLoading extends React.Component<void, void> { }
+        export class AppLoading extends Component<{}> { }
 
         /**
          * Expo BarCodeScanner
@@ -51,7 +50,7 @@ declare module 'expo' {
             style: ViewStyle;
         }
 
-        export class BarCodeScanner extends React.Component<BarCodeScannerProps, void> { }
+        export class BarCodeScanner extends Component<BarCodeScannerProps> { }
 
         /**
          * Expo BlurView
@@ -61,7 +60,7 @@ declare module 'expo' {
             intensity: number;
             style: ViewStyle;
         }
-        export class BlurView extends React.Component<BlurViewProps, void> { }
+        export class BlurView extends Component<BlurViewProps> { }
 
         /**
          * Expo GLView
@@ -72,12 +71,12 @@ declare module 'expo' {
             onContextCreate(): void;
             msaaSamples: number;
         }
-        export class GLView extends React.Component<GLViewProps, {msaaSamples: number}> { }
+        export class GLView extends Component<GLViewProps, {msaaSamples: number}> { }
 
         /**
          * Expo KeepAwake
          */
-        export class KeepAwake extends React.Component<void, void> {
+        export class KeepAwake extends Component<void> {
             static activate(): void;
             static deactivate(): void;
         }
@@ -92,7 +91,7 @@ declare module 'expo' {
             locations: Array<number>;
         }
 
-        export class LinearGradient extends React.Component<LinearGradientProps, void> {}
+        export class LinearGradient extends Component<LinearGradientProps> {}
 
         /**
          * Expo MapView
@@ -126,20 +125,20 @@ declare module 'expo' {
             originY?: number;
         }
 
-        export class Svg extends React.Component<{width: number, heigth: number}, void> { }
-        export class Rect extends React.Component<SvgCommonProps, void> { }
+        export class Svg extends Component<{width: number, heigth: number}> { }
+        export class Rect extends Component<SvgCommonProps> { }
 
         export interface CircleProps extends SvgCommonProps {
             cx: Axis;
             cy: Axis;
         }
-        export class Circle extends React.Component<CircleProps, void> { }
+        export class Circle extends Component<CircleProps> { }
 
         export interface EllipseProps extends CircleProps {
             rx: Axis;
             ry: Axis;
         }
-        export class Ellipse extends React.Component<SvgCommonProps, void> { }
+        export class Ellipse extends Component<SvgCommonProps> { }
 
         export interface LineProps extends SvgCommonProps {
             x1: Axis;
@@ -147,28 +146,28 @@ declare module 'expo' {
             x2: Axis;
             y2: Axis;
         }
-        export class Line extends React.Component<LineProps, void> { }
+        export class Line extends Component<LineProps> { }
 
         export interface PolyProps extends SvgCommonProps {
             points: string;
         }
-        export class Polygon extends React.Component<PolyProps, void> { }
-        export class Polyline extends React.Component<PolyProps, void> { }
+        export class Polygon extends Component<PolyProps> { }
+        export class Polyline extends Component<PolyProps> { }
 
         export interface PathLine extends SvgCommonProps {
             d: string;
         }
-        export class Path extends React.Component<PolyProps, void> { }
+        export class Path extends Component<PolyProps> { }
 
         export interface TextProps extends SvgCommonProps {
             textAnchor: string
         }
-        export class Text extends React.Component<TextProps, void> { }
-        export class G extends React.Component<SvgCommonProps, void> { }
-        export class Use extends React.Component<{href: string, x: number, y: number}, void> { }
-        export class Symbol extends React.Component<{viewbox:string, widt: number, height: number}, void> { }
-        export class Defs extends React.Component<void, void> { }
-        export class RadialGradient extends React.Component<SvgCommonProps, void> { }
+        export class Text extends Component<TextProps> { }
+        export class G extends Component<SvgCommonProps> { }
+        export class Use extends Component<{href: string, x: number, y: number}> { }
+        export class Symbol extends Component<{viewbox:string, widt: number, height: number}> { }
+        export class Defs extends Component<void> { }
+        export class RadialGradient extends Component<SvgCommonProps> { }
 
         /**
          * Expo Video
@@ -223,7 +222,7 @@ declare module 'expo' {
             onEnd?: () => any;
         }
 
-        export class Video extends React.Component<VideoProps, void> {
+        export class Video extends Component<VideoProps> {
               static RESIZE_MODE_CONTAIN: string;
               static RESIZE_MODE_COVER: string;
               static RESIZE_MODE_STRETCH: string;
@@ -232,7 +231,6 @@ declare module 'expo' {
               public presentFullscreenPlayer(): void;
               public dismissFullscreenPlayer(): void;
         }
-    }
 
     /**
      * Expo Asset
@@ -252,7 +250,7 @@ declare module 'expo' {
         public readonly downloaded: boolean;
         public readonly downloadCallbacks: Array<{ resolve, reject }>   // TODO: def of resolve & reject
 
-        public downloadAsync(): void;
+        public downloadAsync(): Promise<any>;
 
         static fromModule(moduleId: number): Asset;
     }
@@ -629,7 +627,7 @@ declare module 'expo' {
             onError: () => any;
         }
 
-        export class BannerView extends React.Component<BannerViewProps, void> {}
+        export class BannerView extends React.Component<BannerViewProps> {}
 
         /**
          * Ad Settings
@@ -656,7 +654,7 @@ declare module 'expo' {
      * Expo Font
      */
     export namespace Font {
-        export function loadAsync(nameOrMap: string|object, uriOrModuleOrAsset: any): void;  // TODO: better defs because the doc is not updated I think ...
+        export function loadAsync(nameOrMap: string|object, uriOrModuleOrAsset: any): Promise<any>;
     }
 
     /**
@@ -954,14 +952,14 @@ declare module '@expo/vector-icons' {
         color?: string;
     }
 
-    export class Entypo extends React.Component<IconProps, void> {}
-    export class EvilIcons extends React.Component<IconProps, void> {}
-    export class FontAwesome extends React.Component<IconProps, void> {}
-    export class Foundation extends React.Component<IconProps, void> {}
-    export class Ionicons extends React.Component<IconProps, void> {}
-    export class MaterialIcons extends React.Component<IconProps, void> {}
-    export class MaterialComunityIcons extends React.Component<IconProps, void> {}
-    export class Octicons extends React.Component<IconProps, void> {}
-    export class Zocial extends React.Component<IconProps, void> {}
-    export class SimpleLineIcons extends React.Component<IconProps, void> {}
+    export class Entypo extends React.Component<IconProps> {}
+    export class EvilIcons extends React.Component<IconProps> {}
+    export class FontAwesome extends React.Component<IconProps> {}
+    export class Foundation extends React.Component<IconProps> {}
+    export class Ionicons extends React.Component<IconProps> {}
+    export class MaterialIcons extends React.Component<IconProps> {}
+    export class MaterialComunityIcons extends React.Component<IconProps> {}
+    export class Octicons extends React.Component<IconProps> {}
+    export class Zocial extends React.Component<IconProps> {}
+    export class SimpleLineIcons extends React.Component<IconProps> {}
 }
