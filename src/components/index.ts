@@ -1,22 +1,22 @@
 
-import Small from "./Small";
+import Avatar from "./avatar/Avatar";
+import BaseContainer from "./BaseContainer";
 import Circle from "./Circle";
 import Field from "./Field";
-import BaseContainer from "./BaseContainer";
 import Images from "./images/Images";
-import Avatar from "./avatar/Avatar";
-import NavigationHelpers from "./NavigationHelpers";
-import WindowDimensions from "./WindowDimensions";
 import LoadingIndicator from "./LoadingIndicator";
+import NavigationHelpers from "./NavigationHelpers";
+import Small from "./Small";
+import WindowDimensions from "./WindowDimensions";
 
 export {
-    Small,
-    Avatar,
-    Circle,
-    Field,
-    BaseContainer,
-    Images,
-    NavigationHelpers,
-    WindowDimensions,
-    LoadingIndicator
+  Small,
+  Avatar,
+  Circle,
+  Field,
+  BaseContainer,
+  Images,
+  NavigationHelpers,
+  WindowDimensions,
+  LoadingIndicator,
 };

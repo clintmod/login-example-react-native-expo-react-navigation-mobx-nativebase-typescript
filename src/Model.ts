@@ -1,11 +1,10 @@
 export interface User {
-  profile: Profile
+  profile: Profile;
 }
 
 export interface Profile {
-  name: string,
-  birthday: number,
-  emailNotifications: boolean,
-  phoneNotifications: boolean,
+  name: string;
+  birthday: number;
+  emailNotifications: boolean;
+  phoneNotifications: boolean;
 }
-

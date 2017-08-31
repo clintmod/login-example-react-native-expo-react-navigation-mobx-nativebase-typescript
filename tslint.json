@@ -1,0 +1,19 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-eslint-rules",
+    "tslint-consistent-codestyle",
+    "tslint-immutable"
+  ],
+  "jsRules": {},
+  "rules": {
+    "jsx-boolean-value": false,
+    "variable-name": false,
+    "interface-name": [false, "never-prefix"],
+    "no-submodule-imports": false,
+    "no-duplicate-imports": false
+  },
+  "rulesDirectory": []
+}

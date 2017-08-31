@@ -1,25 +1,25 @@
 import * as React from "react";
-import {Component} from "react";
-import {View, StyleSheet} from "react-native";
+import { Component } from "react";
+import { StyleSheet, View } from "react-native";
 
 export default class Circle extends Component {
 
-    props: {
-        size?: number,
-        color?: string,
-        children?: any,
-    }
+  public props: {
+    size?: number,
+    color?: string,
+    children?: any,
+  };
 
-    render() {
-        const {size, color} = this.props;
-        const circleStyle = {
-            width: size,
-            height: size,
-            borderRadius: size || 2 / 2,
-            backgroundColor: color,
-            alignItems: "center",
-            justifyContent: "center"
-        };
-        return <View>{this.props.children}</View>;
-    }
+  public render() {
+    const { size, color } = this.props;
+    const circleStyle = {
+      alignItems: "center",
+      backgroundColor: color,
+      borderRadius: size || 2 / 2,
+      height: size,
+      justifyContent: "center",
+      width: size,
+    };
+    return <View>{this.props.children}</View>;
+  }
 }

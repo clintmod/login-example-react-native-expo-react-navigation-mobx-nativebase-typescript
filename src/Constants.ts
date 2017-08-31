@@ -1,13 +1,13 @@
 
-import {User} from "./Model";
+import { User } from "./Model";
 
 const DEFAULT_USER = (name: string): User => ({
-    profile : {
-        name,
-        "birthday" : 519948000000,
-        "emailNotifications" : true,
-        "phoneNotifications" : true
-    }
+  profile: {
+    birthday: 519948000000,
+    emailNotifications: true,
+    name,
+    phoneNotifications: true,
+  },
 });
 
-export {DEFAULT_USER};
+export { DEFAULT_USER };

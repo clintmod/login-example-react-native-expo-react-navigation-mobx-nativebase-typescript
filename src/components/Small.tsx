@@ -1,10 +1,9 @@
 import * as React from "react";
-import {Component} from "react";
-import {Text} from "react-native";
+import { Component } from "react";
+import { Text } from "react-native";
 
 export default class Small extends Component {
-
-    render() {
-        return <Text>{this.props.children}</Text>;
-    }
+  public render() {
+    return <Text>{this.props.children}</Text>;
+  }
 }

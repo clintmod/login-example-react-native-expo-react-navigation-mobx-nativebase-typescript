@@ -1,4 +1,4 @@
 
 import Profile from "./Profile";
 
-export {Profile};
+export { Profile };
