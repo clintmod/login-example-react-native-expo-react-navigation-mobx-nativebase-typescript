@@ -13,7 +13,8 @@
     "variable-name": false,
     "interface-name": [false, "never-prefix"],
     "no-submodule-imports": false,
-    "no-duplicate-imports": false
+    "no-duplicate-imports": false,
+    "jsx-no-multiline-js": false
   },
   "rulesDirectory": []
 }

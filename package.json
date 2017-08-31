@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "dtslint": "^0.1.2",
     "jest-expo": "~20.0.0",
     "jest-expo-ts": "~20.0.0",
     "react-native-scripts": "1.2.1",
@@ -23,6 +24,7 @@
     "ios": "react-native-scripts ios",
     "build": "./node_modules/typescript/bin/tsc && yarn copy-assets",
     "lint": "./node_modules/tslint/bin/tslint -c tslint.json src/**/*.ts src/**/*.tsx",
+    "dtslint": "dtslint ./types/expo",
     "clean": "rimraf build coverage",
     "build-watch": "./node_modules/typescript/bin/tsc --watch",
     "test": "node node_modules/jest/bin/jest.js --coverage",
