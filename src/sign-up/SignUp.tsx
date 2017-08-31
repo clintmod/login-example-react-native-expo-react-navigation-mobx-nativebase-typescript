@@ -1,7 +1,8 @@
 import autobind from "autobind-decorator";
 import { observer } from "mobx-react/native";
 import { Body, Button, Container, Header, Icon, Left, Right, Spinner, Title } from "native-base";
-import React, { Component } from "react";
+import * as React from "react";
+import { Component } from "react";
 import { Image, KeyboardAvoidingView, ScrollView, StyleSheet, View } from "react-native";
 import { NavigationScreenProp } from "react-navigation";
 import { Field, Images } from "../components";

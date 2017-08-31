@@ -1,6 +1,7 @@
 import { EvilIcons } from "@expo/vector-icons";
 import { Body, Button, Container, Header as NBHeader, Icon, Left, Right, Title } from "native-base";
-import React, { Component } from "react";
+import * as React from "react";
+import { Component } from "react";
 import { KeyboardAvoidingView, ScrollView } from "react-native";
 
 export default class BaseContainer extends Component {
