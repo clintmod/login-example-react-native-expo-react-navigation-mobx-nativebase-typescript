@@ -1,6 +1,7 @@
 import * as _ from "lodash";
+import * as React from "react";
 import autobind from "autobind-decorator";
-import React, {Component} from "react";
+import {Component} from "react";
 import {ListItem, Item, Label, Input, Body, Right} from "native-base";
 import {observable, action} from "mobx";
 import { observer } from "mobx-react/native";

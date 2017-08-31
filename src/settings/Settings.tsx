@@ -1,5 +1,6 @@
 import autobind from "autobind-decorator";
-import React, {Component} from "react";
+import * as React from "react";
+import {Component} from "react";
 import {View, Text} from "react-native";
 import {Switch, List, ListItem, Body, Right} from "native-base";
 import {observable, action} from "mobx";

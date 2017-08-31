@@ -1,6 +1,6 @@
-
+import * as React from "react";
 import moment from "moment";
-import React, {Component} from "react";
+import {Component} from "react";
 import {Text, Image, StyleSheet, View} from "react-native";
 import {H1} from "native-base";
 

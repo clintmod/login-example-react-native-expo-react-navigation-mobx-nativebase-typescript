@@ -1,4 +1,5 @@
-import React, {Component} from "react";
+import * as React from "react";
+import {Component} from "react";
 import {Image, StyleSheet} from "react-native";
 
 import Images from "../images/Images";

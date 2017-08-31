@@ -1,5 +1,5 @@
-
-import React, {Component} from "react";
+import * as React from "react";
+import {Component} from "react";
 import {KeyboardAvoidingView, ScrollView} from "react-native";
 import {Container, Button, Header as NBHeader, Left, Body, Title, Right, Icon} from "native-base";
 import { EvilIcons } from "@expo/vector-icons";

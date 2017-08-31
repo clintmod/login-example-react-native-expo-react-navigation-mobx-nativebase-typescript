@@ -1,5 +1,6 @@
 import autobind from "autobind-decorator";
-import React, {Component} from "react";
+import * as React from "react";
+import {Component} from "react";
 import {View, Image, StyleSheet, KeyboardAvoidingView, ScrollView} from "react-native";
 import {Container, Button, Header, Left, Right, Body, Icon, Title, Spinner} from "native-base";
 import {observer} from "mobx-react/native";

@@ -49,6 +49,7 @@ export default class App extends Component {
             .catch(error => console.error(error))
         ;
         useStrict(true);
+        this.authStatusReported = true;
         /*Firebase.init();
         Firebase.auth.onAuthStateChanged(async user => {
             this.isLoggedIn = !!user;

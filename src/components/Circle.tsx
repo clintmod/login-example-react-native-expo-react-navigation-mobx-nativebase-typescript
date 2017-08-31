@@ -1,5 +1,5 @@
-
-import React, {Component} from "react";
+import * as React from "react";
+import {Component} from "react";
 import {View, StyleSheet} from "react-native";
 
 export default class Circle extends Component {

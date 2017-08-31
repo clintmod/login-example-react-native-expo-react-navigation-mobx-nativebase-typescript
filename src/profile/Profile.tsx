@@ -1,4 +1,5 @@
-import React, {Component} from "react";
+import * as React from "react";
+import {Component} from "react";
 import * as _ from "lodash";
 import {View, ScrollView} from "react-native";
 import {H1} from "native-base";
