@@ -26,7 +26,7 @@ export default class Login extends React.Component {
             alert(e.message);
         }
     }
-
+    
     @autobind
     signUp() {
         this.props.navigation.navigate("SignUp");
@@ -35,6 +35,14 @@ export default class Login extends React.Component {
     @autobind
     forgotPassword() {
         this.props.navigation.navigate("ForgotPassword");
+    }
+    @autobind
+    onEmailChanged(email:string):void {
+        this.store.email = email;
+    }
+    @autobind
+    onPasswordChanged(password:string): void {
+        this.store.password = password;
     }
 
     render() {
@@ -55,7 +63,7 @@ export default class Login extends React.Component {
                                 autoCorrect={false}
                                 keyboardType="email-address"
                                 returnKeyType="next"
-                                onChange={email => this.store.email = email}
+                                onChange={this.onEmailChanged}
                                 inverse
                             />
                             <Field
@@ -64,7 +72,7 @@ export default class Login extends React.Component {
                                 autoCapitalize="none"
                                 autoCorrect={false}
                                 returnKeyType="go"
-                                onChange={password => this.store.password = password}
+                                onChange={this.onPasswordChanged}
                                 onSubmitEditing={this.signIn}
                                 last
                                 inverse

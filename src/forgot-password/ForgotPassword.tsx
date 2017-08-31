@@ -33,6 +33,11 @@ export default class ForgotPassword extends React.Component {
             alert(e.message);
         }
     }
+    
+    @autobind
+    onEmailChanged(email:string):void {
+        this.store.email = email;
+    }
 
     render() {
         return <Image source={Images.login} style={style.img}>
@@ -43,7 +48,7 @@ export default class ForgotPassword extends React.Component {
                     autoCorrect={false}
                     keyboardType="email-address"
                     returnKeyType="next"
-                    onChange={email => this.store.email = email}
+                    onChange={this.onEmailChanged}
                     inverse
                 />
                 <Button primary full onPress={this.submit}>
